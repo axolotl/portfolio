@@ -80,3 +80,16 @@ p {
 
 .inner-container {
 }
+
+.project-title {
+  display: flex;
+  align-items: center;
+}
+
+.icon {
+  margin: 4px;
+}
+
+.expanded-content {
+  margin: 0px 10px 0px 10px;
+}

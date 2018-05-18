@@ -10,7 +10,7 @@ class Slide extends Component {
     }
   }
 
-  expand = () => {
+  toggleShow = () => {
     this.setState({
       expanded: !this.state.expanded,
     })
@@ -18,18 +18,24 @@ class Slide extends Component {
 
   render() {
     const { expanded } = this.state;
-    const { expand } = this;
+    const { toggleShow } = this;
 
     return (
       <div>
-        <p onClick={expand}>+ content</p>
-        <ExpandIcon />
-        <HideIcon />
+        <div className='project-title'>
+
+          {!expanded ? 
+            <ExpandIcon onClick={toggleShow} />
+            :
+            <HideIcon onClick={toggleShow} />
+          }
+
+          <p onClick={toggleShow} style={{display:'block'}}>Content with name</p>
+        </div>
 
         {expanded &&
-          <p>more content</p>
+          <p className='expanded-content'>more content</p>
         }
-
       </div>
     )
   }
