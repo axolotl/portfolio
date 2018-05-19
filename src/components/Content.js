@@ -4,8 +4,8 @@ import Slide from './Slide';
 class Content extends Component {
   render() {
     return (
-      <div>
-        <h3 style={{textAlign:'center'}}>These are my projects. Click to expand.</h3>
+      <div id='content-container'>
+        <h3 style={{marginBottom:'5px'}}>These are my projects. Click to expand.</h3>
         <Slide />
         <Slide />
         <Slide />

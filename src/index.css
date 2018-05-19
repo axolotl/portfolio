@@ -19,17 +19,21 @@ h3 {
 
 p {
   font-size: 1.2em;
+  margin: 15px 0 15px 0;
 }
 
 #root {
   background-color: gainsboro;
   height: 100vh;
   padding: 40px;
+  display: flex;
+  justify-content: center;
 }
 
 #outer-container {
   background-color: ghostwhite;
   height: 400px;
+  width: 800px;
   padding: 35px;
   position:relative;
   display: flex;
@@ -40,7 +44,7 @@ p {
           box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
 }
 
-#outer-container:before, .effect7:after {
+#outer-container:before, #outercontainer:after {
   content:"";
   position:absolute;
   z-index:-1;
@@ -67,14 +71,14 @@ p {
 
 #left-side {
   padding: 0 25px;
-  width: 250px;
-  height: 300px;
+  max-width: 250px;
+  /*max-height: 300px;*/
   border-right: 1px black solid;
 }
 
 #right-side {
-  padding: 0 25px 0 40px;
-  width: 400px;
+  padding: 0 0px 0 25px;
+  /*width: 400px;*/
   height: 300px;
 }
 
@@ -92,4 +96,23 @@ p {
 
 .expanded-content {
   margin: 0px 10px 0px 10px;
+}
+
+@media (max-width: 800px) {
+  #outer-container {
+    width: auto;
+    height: auto;
+    display: flex;
+  }
+  #left-side {
+    max-width: 100%;
+    max-height: min-content;
+    border: none;
+    margin-bottom: 10px;
+  }
+  #content-container {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-top: 1px black solid;
+  }
 }
