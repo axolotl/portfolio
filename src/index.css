@@ -22,18 +22,22 @@ p {
   margin: 15px 0 15px 0;
 }
 
+html, body, #app, #root {
+  height: 100%;
+  overflow: auto;
+}
+
 #root {
   background-color: gainsboro;
-  height: 100vh;
-  padding: 40px;
   display: flex;
   justify-content: center;
 }
 
 #outer-container {
   background-color: ghostwhite;
-  height: 400px;
-  width: 800px;
+  height: auto;
+  overflow: auto;
+  margin: 40px;
   padding: 35px;
   position:relative;
   display: flex;
@@ -72,17 +76,15 @@ p {
 #left-side {
   padding: 0 25px;
   max-width: 250px;
-  /*max-height: 300px;*/
   border-right: 1px black solid;
 }
 
 #right-side {
   padding: 0 0px 0 25px;
-  /*width: 400px;*/
-  height: 300px;
 }
 
 .inner-container {
+  height: auto;
 }
 
 .project-title {
@@ -103,6 +105,7 @@ p {
     width: auto;
     height: auto;
     display: flex;
+    margin: 20px;
   }
   #left-side {
     max-width: 100%;
@@ -110,8 +113,11 @@ p {
     border: none;
     margin-bottom: 10px;
   }
+  .inner-container {
+    margin-bottom: 0px;
+  }
   #content-container {
-    margin-top: 20px;
+    margin-top: 0px;
     margin-bottom: 20px;
     border-top: 1px black solid;
   }
