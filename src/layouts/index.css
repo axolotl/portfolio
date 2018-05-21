@@ -22,7 +22,7 @@ p {
   margin: 15px 0 15px 0;
 }
 
-html, body, #app, #root {
+html, body, #___gatsby, #app, #root {
   height: 100%;
   overflow: auto;
 }
@@ -42,7 +42,7 @@ html, body, #app, #root {
   position:relative;
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
+  justify-content: center;
   -webkit-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
      -moz-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
           box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
@@ -74,17 +74,21 @@ html, body, #app, #root {
 }
 
 #left-side {
-  padding: 0 25px;
-  max-width: 250px;
+  padding-right: 4%;
+  padding-left: 4%;
   border-right: 1px black solid;
 }
 
 #right-side {
-  padding: 0 0px 0 25px;
+  padding-left: 4%;
+  padding-right: 4%;
 }
 
 .inner-container {
   height: auto;
+  min-width: 42%;
+  width: 350px;
+  max-width: 350px;
 }
 
 .project-title {
@@ -96,25 +100,44 @@ html, body, #app, #root {
   margin: 4px;
 }
 
-.expanded-content {
-  margin: 0px 10px 0px 10px;
+.inner-content-container {
+  display: flex;
+  flex-direction: column;
 }
 
+.expanded-content {
+  padding: 0px 10px 0px 10px;
+  margin: 5px 0px 5px 0px;
+}
+
+
 @media (max-width: 800px) {
+  h1 {
+    margin-top: 5px;
+  }
   #outer-container {
     width: auto;
     height: auto;
     display: flex;
     margin: 20px;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
   }
   #left-side {
-    max-width: 100%;
+    max-width: 400px;
+    min-width: 300px;
     max-height: min-content;
     border: none;
     margin-bottom: 10px;
   }
+  #right-side {
+    max-width: 400px;
+    min-width: 300px;
+  }
   .inner-container {
     margin-bottom: 0px;
+    width: 100%;
   }
   #content-container {
     margin-top: 0px;

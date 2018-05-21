@@ -21,7 +21,7 @@ class Slide extends Component {
     const { toggleShow } = this;
 
     return (
-      <div>
+      <div className='inner-content-container'>
         <div className='project-title'>
 
           {!expanded ? 
