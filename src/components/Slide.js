@@ -1,24 +1,26 @@
 import React, { Component } from 'react';
+import AnimateHeight from 'react-animate-height';
 import ExpandIcon from '../icons/Expand';
 import HideIcon from '../icons/Hide';
 
 class Slide extends Component {
-  constructor() {
-    super();
-    this.state = {
-      expanded: false,
-    }
+  state = {
+    height: 0,
+    expanded: false,
   }
 
   toggleShow = () => {
+    const { height, expanded } = this.state;
+ 
     this.setState({
-      expanded: !this.state.expanded,
+      height: height === 0 ? 'auto' : 0,
+      expanded: !expanded,
     })
   }
 
   render() {
-    const { slide } = this.props;
-    const { expanded } = this.state;
+    const { title, content } = this.props.slide;
+    const { height, expanded } = this.state;
     const { toggleShow } = this;
 
     return (
@@ -31,12 +33,15 @@ class Slide extends Component {
             <HideIcon onClick={toggleShow} />
           }
 
-          <p onClick={toggleShow}>{slide.title}</p>
+          <p onClick={toggleShow}>{title}</p>
         </div>
 
-        {expanded &&
-          <p className='expanded-content'>{slide.content}</p>
-        }
+        <AnimateHeight
+          duration={ 500 }
+          height={ height }>
+            <p className='expanded-content'>{content}</p>
+        </AnimateHeight>  
+
       </div>
     )
   }
