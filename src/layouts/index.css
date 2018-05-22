@@ -24,8 +24,8 @@ p {
 }
 
 html, body, #___gatsby, #app, #root {
+  /*keep root div locked at full screen with overflow delegated to inner components*/
   height: 100%;
-  overflow: auto;
 }
 
 #root {
@@ -36,16 +36,18 @@ html, body, #___gatsby, #app, #root {
 
 #outer-container {
   background-color: ghostwhite;
-  height: auto;
+  /*overflow will happen in this div on small screens*/
   overflow: auto;
   /*prevent chrome from resizing content when displaying scroll bar*/
   overflow-y: overlay;
   margin: 40px;
   padding: 35px;
-  position:relative;
+
   display: flex;
   flex-direction: row;
   justify-content: center;
+
+  position: relative;
   -webkit-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
      -moz-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
           box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
@@ -77,27 +79,21 @@ html, body, #___gatsby, #app, #root {
 }
 
 #left-side {
-  padding-right: 4%;
-  padding-left: 4%;
   border-right: 1px black solid;
-
   width: 350px;
-  max-width: 600px;
 }
 
 #right-side {
-  padding-left: 4%;
-  padding-right: 4%;
+  /*determine in which div scrollbar will appear*/
   overflow: auto;
   /*prevent chrome from resizing content when displaying scroll bar*/
   overflow-y: overlay;
-
   width: 600px;
-  max-width: 600px;
 }
 
 .inner-container {
-  height: auto;
+  padding-left: 3%;
+  padding-right: 3%;
 }
 
 .project-title {
@@ -142,44 +138,34 @@ a {
   #outer-container {
     /*with to 5000px because no other width setting force div to full width*/
     width: 5000px;
-    height: auto;
-    display: flex;
     margin: 20px;
-    padding: 35px 45px 35px 45px;
+    padding: 30px 40px 30px 40px;
+    display: flex;
     flex-direction: column;
     justify-content: flex-start;
   }
-  #about-container {
-    width: 100%;
-  }
   #left-side {
-    /*max-width: 400px;*/
-    /*min-width: 300px;*/
-    display: block;
-    min-width: 300px;
+    /*force width to fill available space*/
     width: 100%;
-    max-width: none;
-    max-height: min-content;
+    /*remove border/divider*/
     border: none;
     margin-bottom: 10px;
     padding: 0px;
   }
   #right-side {
-    /*max-width: 400px;*/
-    /*min-width: 300px;*/
+    /*force div to contain itself*/
     width: auto;
-    /*min-width: 300px;*/
+    /*force overflow into parent div*/
     overflow: visible;
     padding: 0px;
   }
   .inner-container {
     margin-bottom: 0px;
-    width: auto;
+    min-width: 300px
   }
   #content-container {
     margin-top: 0px;
     margin-bottom: 20px;
     border-top: 1px black solid;
-    min-width: 300px
   }
 }
