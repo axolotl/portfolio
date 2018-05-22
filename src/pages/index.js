@@ -41,6 +41,8 @@ export const query = graphql`
       edges {
         node {
           title
+          host_link
+          github_link
           content
         }
       }

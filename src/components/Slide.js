@@ -19,7 +19,7 @@ class Slide extends Component {
   }
 
   render() {
-    const { title, content } = this.props.slide;
+    const { title, host_link, github_link, content } = this.props.slide;
     const { height, expanded } = this.state;
     const { toggleShow } = this;
 
@@ -33,13 +33,22 @@ class Slide extends Component {
             <HideIcon onClick={toggleShow} />
           }
 
-          <p onClick={toggleShow}>{title}</p>
+          <p className='slide-title' onClick={toggleShow}>{title}</p>
         </div>
 
         <AnimateHeight
           duration={ 500 }
           height={ height }>
-            <p className='expanded-content'>{content}</p>
+
+            
+            <p className='expanded-content'>
+              <span className='links'>
+                <a href={host_link}>See it live</a>
+              <a href={github_link}>See source</a>
+              </span>
+              {content}
+            </p>
+
         </AnimateHeight>  
 
       </div>
