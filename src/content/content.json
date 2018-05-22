@@ -1,0 +1,13 @@
+{
+  "about": {
+    "header": "Hello,",
+    "content": [
+      "My name is Samuel Machat.",
+      "I am learning web development. This is my portfolio.",
+      "I am looking to work for a dynamic, cutting-edge company, where I can work towards a meaningful mission and boostrap my skills rapidly in order to produce more and more value."
+    ]
+  },
+  "slides": {
+    "header": "These are my projects. Click to expand."
+  }
+}

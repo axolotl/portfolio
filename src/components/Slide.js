@@ -17,6 +17,7 @@ class Slide extends Component {
   }
 
   render() {
+    const { slide } = this.props;
     const { expanded } = this.state;
     const { toggleShow } = this;
 
@@ -30,11 +31,11 @@ class Slide extends Component {
             <HideIcon onClick={toggleShow} />
           }
 
-          <p onClick={toggleShow} style={{display:'block'}}>Content with name</p>
+          <p onClick={toggleShow}>{slide.title}</p>
         </div>
 
         {expanded &&
-          <p className='expanded-content'>more content</p>
+          <p className='expanded-content'>{slide.content}</p>
         }
       </div>
     )
