@@ -10,7 +10,6 @@ const AppWrapper = ({ children }) => (
       link={[
         { rel:'stylesheet', type:'text/css', href:'https://fonts.googleapis.com/css?family=Josefin+Slab' },
         { rel:'stylesheet', type:'text/css', href:'https://fonts.googleapis.com/css?family=Open+Sans' },
-        { rel:'stylesheet', type:'text/css', href:'https://fonts.googleapis.com/css?family=Josefin+Sans' }
       ]}
     />
     {children()}
