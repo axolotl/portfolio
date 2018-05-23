@@ -113,6 +113,8 @@ html, body, #___gatsby, #app, #root {
 
 .icon {
   margin: 4px;
+  min-width: 24px;
+  min-height: 24px;
 }
 
 .inner-content-container {
@@ -201,8 +203,9 @@ a {
     margin-right: 30px;
   }
   .gatsby-image-outer-wrapper {
-    float: right;
-    margin-left: 25px;
+    float: left;
+    margin-right: 25px;
     margin-bottom: 5px;
+    margin-top: 5px;
   }
 }
