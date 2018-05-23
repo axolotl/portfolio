@@ -20,20 +20,21 @@ class Slide extends Component {
 
   render() {
     const { title, host_link, github_link, content } = this.props.slide;
+    const { background } = this.props;
     const { height, expanded } = this.state;
     const { toggleShow } = this;
 
     return (
-      <div className='inner-content-container'>
+      <div className='inner-content-container' style={background} onClick={toggleShow}>
         <div className='project-title'>
 
           {!expanded ? 
-            <ExpandIcon onClick={toggleShow} />
+            <ExpandIcon />
             :
-            <HideIcon onClick={toggleShow} />
+            <HideIcon />
           }
 
-          <p className='slide-title' onClick={toggleShow}>{title}</p>
+          <p className='slide-title' style={{fontWeight: expanded ? 'bold' : 'normal'}}>{title}</p>
         </div>
 
         <AnimateHeight
@@ -43,8 +44,12 @@ class Slide extends Component {
             
             <p className='expanded-content'>
               <span className='links'>
-                <a href={host_link}>See it live</a>
-              <a href={github_link}>See source</a>
+                {host_link &&
+                  <a href={host_link}>See it live</a>
+                }
+                {github_link &&
+                  <a href={github_link}>See source</a>
+                }
               </span>
               {content}
             </p>

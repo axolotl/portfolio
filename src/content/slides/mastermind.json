@@ -1,5 +1,5 @@
 {
-  "title": "Full Stack Mastermind",
+  "title": "Mastermind (the classic code-breaking game)",
   "host_link": "https://axolotl-mastermind.herokuapp.com/",
   "github_link": "https://github.com/axolotl/mastermind-app",
   "content": "Fullstack web app for the code-breaking game Mastermind. postgres + express + sequelize + react + redux."

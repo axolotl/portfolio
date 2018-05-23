@@ -1,0 +1,6 @@
+{
+  "title": "The Story of Keswick (a book site)",
+  "host_link": "http://storyofkeswick.com/",
+  "github_link": "https://github.com/axolotl/keswick-book-site",
+  "content": "A book site/blog built with Gatsby. Includes pagination, searchable categories."
+}

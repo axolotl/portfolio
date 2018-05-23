@@ -113,11 +113,14 @@ html, body, #___gatsby, #app, #root {
 .expanded-content {
   padding: 0px 10px 0px 10px;
   margin: 5px 0px 5px 0px;
+  font-size: .85em;
+  font-family: 'Open Sans', sans-serif;
+  /*font-family: 'Josefin Sans', sans-serif;*/
 }
 
 .slide-title {
   margin-top: .5em;
-  margin-bottom: .5em;
+  margin-bottom: 4px;
 }
 
 .links {
