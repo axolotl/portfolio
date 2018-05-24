@@ -2,5 +2,5 @@
   "title": "A demonstration of dynamic divs generation",
   "host_link": "https://axolotl.github.io/dynamic-divs/",
   "github_link": "https://github.com/axolotl/dynamic-divs",
-  "content": "Another recent exercise."
+  "content": "A recent exercise. App grabs window height and width and determines how many boxes to render accordingly."
 }

@@ -4,6 +4,9 @@ import Content from '../components/Content';
 
 class App extends Component {
   render() {
+    console.log(this.props.data);
+
+    
     const { resolutions: image } = this.props.data.avatar.childImageSharp;
     const { childContentJson: content } = this.props.data.content;
     const { edges: slides } = this.props.data.allSlidesJson;
@@ -15,11 +18,12 @@ class App extends Component {
             <About image={image} content={content.about}/>
           </div>
           <div id='right-side' className='inner-container'>
-            <Content header={content.slides.header} slides={slides}/>
+            <Content header={content.slides.content} slides={slides}/>
           </div>        
         </div>
       </div>
     )
+    
   }
 }
 
@@ -41,6 +45,7 @@ export const query = graphql`
         }
         slides {
           header
+          content
         }
       }
     }

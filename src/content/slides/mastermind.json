@@ -2,5 +2,5 @@
   "title": "Mastermind (the classic code-breaking game)",
   "host_link": "https://axolotl-mastermind.herokuapp.com/",
   "github_link": "https://github.com/axolotl/mastermind-app",
-  "content": "Fullstack web app for the code-breaking game Mastermind. postgres + express + sequelize + react + redux."
+  "content": "Fullstack web app for the code-breaking game Mastermind. Postgres + Express + Sequelize + React + Redux. Hosted on Heroku. This app is my most ambitious project to date, and my only fullstack one. Styling is applied almost entirely inline via functional components."
 }

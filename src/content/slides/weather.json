@@ -1,6 +1,6 @@
 {
   "title": "A simple weather app",
-  "host_link": "",
+  "host_link": "https://first-react-project-axolotl.firebaseapp.com/",
   "github_link": "https://github.com/axolotl/first-react-project",
-  "content": "This was my first React project. It was part of the curriculum for a course I did by Tyler McGinnis called React Fundamentals. Despite being part of a course, the project was only loosely guided. In the words of Tyler, \"The goal here is to give you just enough guidance for you to struggle without drowning.\" It is a very simple weather app which accepts an input from the user (a city or place), then queries a weather API for that parameter, parses the response, and displays a forecast."
+  "content": "This was my first React project. It was part of the curriculum for a course I did by Tyler McGinnis called React Fundamentals. Despite being part of a course, the project was only loosely guided. In the words of Tyler, 'The goal here is to give you just enough guidance for you to struggle without drowning.' It is a very simple weather app which accepts an input from the user (a city or place), then queries a weather API for that parameter, parses the response, and displays a forecast."
 }

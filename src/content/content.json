@@ -3,11 +3,17 @@
     "header": "Hello,",
     "content": [
       "My name is Samuel Machat.",
-      "I have been learning how to build web apps with React. This is my portfolio.",
-      "My goal is to work for a dynamic, cutting-edge company building useful products."
+      "This is my web development portfolio.",
+      "I am looking for a junior dev position where I can accelerate my learning while contributing to the production of real-world products",
+      "View my profile on Github [link]. Contact me via [Facebook, email] for work references."
     ]
   },
   "slides": {
-    "header": "These are my projects. They consist of larger projects and quick exericses. Click for more information."
+    "header": "",
+    "content": [
+      "This portfolio consists of web apps built with React or a React-based framework such as Gatsby.",
+      "In these apps, I employ the following notable frameworks and libraries: Gatsby, Express, Postgres, Sequelize, Redux, Redux Form, and GraphQL. Projects are hosted on Heroku, Firebase, and Github Pages.",
+      "Click a project for more information."
+    ]
   }
 }
