@@ -1,66 +1,34 @@
-import React, { Component } from 'react';
-import About from '../components/About';
-import Content from '../components/Content';
+import React from 'react';
+import Title from '../components/styles/Title';
+import Content from '../components/styles/Content';
+import Text from '../components/styles/Text';
 
-class App extends Component {
-  render() {
-    console.log(this.props.data);
+const Index = ({ data }) => {
+  const { header, content } = data.content.childContentJson.about
 
-    
-    const { resolutions: image } = this.props.data.avatar.childImageSharp;
-    const { childContentJson: content } = this.props.data.content;
-    const { edges: slides } = this.props.data.allSlidesJson;
+  console.log(content);
 
-    return (
-      <div id='root'>
-        <div id='outer-container'>
-          <div id='left-side' className='inner-container'>
-            <About image={image} content={content.about}/>
-          </div>
-          <div id='right-side' className='inner-container'>
-            <Content header={content.slides.content} slides={slides}/>
-          </div>        
-        </div>
-      </div>
-    )
-    
-  }
+  return (
+    <Content>
+      <Title>{header}</Title>
+      {content.map((content, i) => (
+        <Text key={i}>{content}</Text>
+      ))}
+    </Content>
+  )
 }
 
-export const query = graphql`
-  query contentQuery {
-    avatar: file(relativePath: { eq: "images/self.jpg" }) {
-      childImageSharp {
-        resolutions(width: 200, quality: 100) {
-          ...GatsbyImageSharpResolutions
-        }
-      }
-    }
-    
+export default Index
+
+export const indexQuery = graphql`
+  query indexQuery {
     content: file(relativePath: { eq: "content.json"}) {
       childContentJson {
         about {
           header
           content
         }
-        slides {
-          header
-          content
-        }
-      }
-    }
-
-    allSlidesJson {
-      edges {
-        node {
-          title
-          host_link
-          github_link
-          content
-        }
       }
     }
   }
 `
-
-export default App

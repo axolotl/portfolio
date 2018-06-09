@@ -1,6 +1,0 @@
-{
-  "title": "A simple Tic-Tac-Toe app",
-  "host_link": "https://axolotl.github.io/tic-tac-toe/",
-  "github_link": "https://github.com/axolotl/tic-tac-toe",
-  "content": "I created this app recently as an exercise. Board is drawn from a two-dimensional array held in state, which each cell rendered as a div and positioned with flexbox. Plays are made via methods that update state and check for wins."
-}

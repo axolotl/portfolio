@@ -1,10 +1,32 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
-import './index.css';
+import { injectGlobal } from 'styled-components';
 
-const AppWrapper = ({ children }) => (
-  <div id='app'>
+// import wrappers
+import Outer from '../components/wrappers/Outer';
+import Inner from '../components/wrappers/Inner';
+import ContentWrapper from '../components/wrappers/ContentWrapper';
+
+// import components
+import Header from '../components/Header';
+import Sidebar from '../components/Sidebar';
+import Image from '../components/Image';
+
+injectGlobal`
+  body {
+    margin: 0;
+  }
+
+  p {
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+`;
+
+const App = ({ children, location, data }) => (
+  <div>
     <Helmet 
       title='Portfolio'
       link={[
@@ -12,12 +34,55 @@ const AppWrapper = ({ children }) => (
         { rel:'stylesheet', type:'text/css', href:'https://fonts.googleapis.com/css?family=Open+Sans' },
       ]}
     />
-    {children()}
+
+    {location.pathname.match(/^\/projects/) != null ?
+      <div>
+        <Header />
+        <Sidebar data={data}>{children}</Sidebar>
+      </div>
+      :
+      <div>
+        <Header />
+        <Outer>
+          <Inner>
+            <ContentWrapper>
+              <Image data={data}></Image>
+              {children()}
+            </ContentWrapper>
+          </Inner>
+        </Outer>
+      </div>
+    }
+
   </div>
 )
 
-AppWrapper.propTypes = {
+
+App.propTypes = {
   children: PropTypes.func,
 }
 
-export default AppWrapper
+export default App
+
+export const contentQuery = graphql`
+  query contentQuery {
+    avatar: file(relativePath: { eq: "images/self.jpg" }) {
+      childImageSharp {
+        resolutions(width: 200, quality: 100) {
+          ...GatsbyImageSharpResolutions
+        }
+      }
+    }
+    allProjectsJson {
+      edges {
+        node {
+          fields {
+            slug
+          }
+          link_name
+          type
+        }
+      }
+    }
+  }
+`
