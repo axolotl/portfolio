@@ -1,6 +1,6 @@
-import React from 'react';
-import Link from 'gatsby-link';
-import styled from 'styled-components';
+import React from "react";
+import Link from "gatsby-link";
+import styled from "styled-components";
 
 const Outer = styled.div`
   display: flex;
@@ -27,9 +27,8 @@ const Wrapper = styled.div`
   flex-direction: row;
 `;
 
-
 const P = styled(Link)`
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
   text-decoration: none;
   color: black;
   font-weight: 300;
@@ -62,9 +61,9 @@ const Header = () => (
         <P to="/projects">Projects</P>
         <P to="/about">About</P>
         <P to="/contact">Contact</P>
-      </Wrapper>  
+      </Wrapper>
     </Inner>
-  </Outer> 
-)
+  </Outer>
+);
 
-export default Header
+export default Header;

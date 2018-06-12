@@ -1,9 +1,9 @@
-import React from 'react';
-import styled from 'styled-components';
+import React from "react";
+import styled from "styled-components";
 
 const Container = styled.div`
   height: 4em;
-  widtH: 4em;
+  width: 4em;
 `;
 
 const Button = styled.div`
@@ -19,9 +19,7 @@ const Button = styled.div`
     width: 3em;
     height: 0.15em;
     background: black;
-    box-shadow: 
-      0 1em 0 0 black,
-      0 2em 0 0 black;
+    box-shadow: 0 1em 0 0 black, 0 2em 0 0 black;
   }
 `;
 
@@ -29,7 +27,6 @@ const MenuToggle = ({ toggleExpanded }) => (
   <Container onClick={toggleExpanded}>
     <Button />
   </Container>
+);
 
-)
-
-export default MenuToggle
+export default MenuToggle;

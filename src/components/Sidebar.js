@@ -1,15 +1,14 @@
-import React from 'react';
-import Link from 'gatsby-link';
-import styled from 'styled-components';
+import React from "react";
+import Link from "gatsby-link";
+import styled from "styled-components";
 
 // import style components
-import SidebarWrapper from './wrappers/SidebarWrapper';
-
+import SidebarWrapper from "./wrappers/SidebarWrapper";
 
 const List = styled.ul`
   margin: 5px 0;
   padding: 0;
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-size: 1em;
   font-weight: bold;
 `;
@@ -23,7 +22,7 @@ const ListItem = styled.li`
 `;
 
 const StyledLink = styled(Link)`
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
   text-decoration: none;
   color: #393939;
 
@@ -34,36 +33,41 @@ const StyledLink = styled(Link)`
 
 const Sidebar = ({ data }) => {
   const { edges } = data.allProjectsJson;
-  const projects = edges.filter(edge => edge.node.type === 'project');
-  const exercises = edges.filter(edge => edge.node.type === 'exercise');
+  const projects = edges.filter(edge => edge.node.type === "project");
+  const exercises = edges.filter(edge => edge.node.type === "exercise");
 
-  return(
-
+  return (
     <SidebarWrapper>
-      <List>Intro
+      <List>
+        Intro
         <ListItem>
           <StyledLink to="/projects">What and Why?</StyledLink>
         </ListItem>
       </List>
 
-      <List>Projects
+      <List>
+        Projects
         {projects.map((project, i) => (
           <ListItem key={i}>
-            <StyledLink to={project.node.fields.slug}>{project.node.link_name}</StyledLink>
+            <StyledLink to={project.node.fields.slug}>
+              {project.node.link_name}
+            </StyledLink>
           </ListItem>
         ))}
       </List>
 
-      <List>Exercises
+      <List>
+        Exercises
         {exercises.map((exercise, i) => (
           <ListItem key={i}>
-            <StyledLink to={exercise.node.fields.slug}>{exercise.node.link_name}</StyledLink>
+            <StyledLink to={exercise.node.fields.slug}>
+              {exercise.node.link_name}
+            </StyledLink>
           </ListItem>
         ))}
       </List>
     </SidebarWrapper>
-    
-  )
-}
+  );
+};
 
-export default Sidebar
+export default Sidebar;

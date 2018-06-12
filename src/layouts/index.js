@@ -1,17 +1,17 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import Helmet from 'react-helmet';
-import { injectGlobal } from 'styled-components';
+import React from "react";
+import PropTypes from "prop-types";
+import Helmet from "react-helmet";
+import { injectGlobal } from "styled-components";
 
 // import wrappers
-import Outer from '../components/wrappers/Outer';
-import Inner from '../components/wrappers/Inner';
-import ContentWrapper from '../components/wrappers/ContentWrapper';
+import Outer from "../components/wrappers/Outer";
+import Inner from "../components/wrappers/Inner";
+import ContentWrapper from "../components/wrappers/ContentWrapper";
 
 // import components
-import Header from '../components/Header';
-import Responsive from '../components/Responsive';
-import Image from '../components/Image';
+import Header from "../components/Header";
+import Responsive from "../components/Responsive";
+import Image from "../components/Image";
 
 injectGlobal`
   body {
@@ -27,42 +27,50 @@ injectGlobal`
 
 const App = ({ children, location, data }) => (
   <div>
-    <Helmet 
-      title='Portfolio'
+    <Helmet
+      title="Portfolio"
       link={[
-        { rel:'stylesheet', type:'text/css', href:'https://fonts.googleapis.com/css?family=Josefin+Slab' },
-        { rel:'stylesheet', type:'text/css', href:'https://fonts.googleapis.com/css?family=Open+Sans' },
+        {
+          rel: "stylesheet",
+          type: "text/css",
+          href: "https://fonts.googleapis.com/css?family=Josefin+Slab"
+        },
+        {
+          rel: "stylesheet",
+          type: "text/css",
+          href: "https://fonts.googleapis.com/css?family=Open+Sans"
+        }
       ]}
     />
 
-    {location.pathname.match(/^\/projects/) != null ?
+    {location.pathname.match(/^\/projects/) != null ? (
       <div>
         <Header />
-        <Responsive data={data} location={location}>{children}</Responsive>
+        <Responsive data={data} location={location}>
+          {children}
+        </Responsive>
       </div>
-      :
+    ) : (
       <div>
         <Header />
         <Outer>
           <Inner>
             <ContentWrapper>
-              <Image data={data}></Image>
-                {children()}
+              <Image data={data} />
+              {children()}
             </ContentWrapper>
           </Inner>
         </Outer>
       </div>
-    }
-
+    )}
   </div>
-)
-
+);
 
 App.propTypes = {
-  children: PropTypes.func,
-}
+  children: PropTypes.func
+};
 
-export default App
+export default App;
 
 export const contentQuery = graphql`
   query contentQuery {
@@ -85,4 +93,4 @@ export const contentQuery = graphql`
       }
     }
   }
-`
+`;

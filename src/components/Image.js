@@ -1,6 +1,6 @@
-import React from 'react';
-import Img from 'gatsby-image';
-import styled from 'styled-components';
+import React from "react";
+import Img from "gatsby-image";
+import styled from "styled-components";
 
 const StyledImage = styled(Img)`
   border: 1px solid black;
@@ -12,9 +12,7 @@ const StyledImage = styled(Img)`
 const ImagePage = ({ data }) => {
   const { resolutions: image } = data.avatar.childImageSharp;
 
-  return (   
-    <StyledImage className='avatar' resolutions={image} />  
-  )
-}
+  return <StyledImage className="avatar" resolutions={image} />;
+};
 
 export default ImagePage;

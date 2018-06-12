@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 // sets width and flex direction of the page content
 
@@ -9,4 +9,4 @@ const Inner = styled.div`
   justify-content: left;
 `;
 
-export default Inner
+export default Inner;

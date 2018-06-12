@@ -1,11 +1,10 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 const SidebarWrapper = styled.div`
   display: flex;
   flex-direction: column;
   min-width: 200px;
-  padding: 10px
-  p {
+  padding: 10px p {
     margin: 0px;
   }
 `;
