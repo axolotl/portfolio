@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import Text from '../components/styles/Text';
 
 const Container = styled.div`
   padding: 0;
@@ -15,15 +16,9 @@ const Links = styled.p`
   margin: 5px 0;
 `;
 
-const Content = styled.p`
-  line-height: 1.5;
-  margin: 10px 0;
-`;
-
 export default ({ data, errors }) => {
   const { title, host_link, github_link, content } = data.projectsJson;
-  console.log(data)
-  console.log(errors)
+
   return (
     <Container>
       <Title>{title}</Title>
@@ -38,7 +33,12 @@ export default ({ data, errors }) => {
           }
         </span>
       </Links>
-      <Content>{content}</Content>
+
+      {content.map((line, i) => (
+        <Text key={i}>{line}</Text>
+      ))}
+
+
     </Container>
   )
 }

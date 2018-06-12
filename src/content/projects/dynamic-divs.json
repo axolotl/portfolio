@@ -4,5 +4,8 @@
   "type": "exercise",
   "host_link": "https://axolotl.github.io/dynamic-divs/",
   "github_link": "https://github.com/axolotl/dynamic-divs",
-  "content": "A recent exercise. App grabs window height and width and determines how many boxes to render accordingly."
+  "content": [
+    "A recent exercise. App grabs window height and width and determines how many boxes to render accordingly.",
+    "blah"
+  ]
 }

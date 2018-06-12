@@ -4,5 +4,10 @@
   "type": "project",
   "host_link": "http://storyofkeswick.com/",
   "github_link": "https://github.com/axolotl/keswick-book-site",
-  "content": "A book site/blog built with Gatsby. I rebuild this site from archives from Wayback Machine (the owner let their hosting subscription expire). Original site was built with Drupal, so everything needed to be refactored for React. Includes dynamically generated pages from markdown, pagination, and searchable categories."
+  "content": [
+    "A book site/blog built with Gatsby.",
+    "I rebuild this site from archives from Wayback Machine (the owner let their hosting subscription expire).",
+    "Original site was built with Drupal, so everything needed to be refactored for React.",
+    "Includes dynamically generated pages from markdown, pagination, and searchable categories."
+  ]
 }

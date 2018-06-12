@@ -4,5 +4,7 @@
   "type": "project",
   "host_link": "https://auth-demo.herokuapp.com/",
   "github_link": "https://github.com/axolotl/auth-demo",
-  "content": "A blah blah blah"
+  "content": [
+    "A blah blah blah"
+  ]
 }

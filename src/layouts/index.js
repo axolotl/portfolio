@@ -10,7 +10,7 @@ import ContentWrapper from '../components/wrappers/ContentWrapper';
 
 // import components
 import Header from '../components/Header';
-import Sidebar from '../components/Sidebar';
+import Responsive from '../components/Responsive';
 import Image from '../components/Image';
 
 injectGlobal`
@@ -38,7 +38,7 @@ const App = ({ children, location, data }) => (
     {location.pathname.match(/^\/projects/) != null ?
       <div>
         <Header />
-        <Sidebar data={data}>{children}</Sidebar>
+        <Responsive data={data} location={location}>{children}</Responsive>
       </div>
       :
       <div>
@@ -47,7 +47,7 @@ const App = ({ children, location, data }) => (
           <Inner>
             <ContentWrapper>
               <Image data={data}></Image>
-              {children()}
+                {children()}
             </ContentWrapper>
           </Inner>
         </Outer>

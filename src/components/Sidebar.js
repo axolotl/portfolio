@@ -3,9 +3,6 @@ import Link from 'gatsby-link';
 import styled from 'styled-components';
 
 // import style components
-import Outer from './wrappers/Outer';
-import Inner from './wrappers/Inner';
-import ContentWrapper from './wrappers/ContentWrapper';
 import SidebarWrapper from './wrappers/SidebarWrapper';
 
 
@@ -35,45 +32,37 @@ const StyledLink = styled(Link)`
   }
 `;
 
-const Sidebar = ({ data, children }) => {
+const Sidebar = ({ data }) => {
   const { edges } = data.allProjectsJson;
   const projects = edges.filter(edge => edge.node.type === 'project');
   const exercises = edges.filter(edge => edge.node.type === 'exercise');
 
   return(
-    <Outer>
-      <Inner>
 
-        <SidebarWrapper>
-          <List>Intro
-            <ListItem>
-              <StyledLink to="/projects">What and Why?</StyledLink>
-            </ListItem>
-          </List>
+    <SidebarWrapper>
+      <List>Intro
+        <ListItem>
+          <StyledLink to="/projects">What and Why?</StyledLink>
+        </ListItem>
+      </List>
 
-          <List>Projects
-            {projects.map((project, i) => (
-              <ListItem key={i}>
-                <StyledLink to={project.node.fields.slug}>{project.node.link_name}</StyledLink>
-              </ListItem>
-            ))}
-          </List>
+      <List>Projects
+        {projects.map((project, i) => (
+          <ListItem key={i}>
+            <StyledLink to={project.node.fields.slug}>{project.node.link_name}</StyledLink>
+          </ListItem>
+        ))}
+      </List>
 
-          <List>Exercises
-            {exercises.map((exercise, i) => (
-              <ListItem key={i}>
-                <StyledLink to={exercise.node.fields.slug}>{exercise.node.link_name}</StyledLink>
-              </ListItem>
-            ))}
-          </List>
-        </SidebarWrapper>
-
-        <ContentWrapper>
-          {children()}
-        </ContentWrapper>
-
-      </Inner>
-    </Outer>
+      <List>Exercises
+        {exercises.map((exercise, i) => (
+          <ListItem key={i}>
+            <StyledLink to={exercise.node.fields.slug}>{exercise.node.link_name}</StyledLink>
+          </ListItem>
+        ))}
+      </List>
+    </SidebarWrapper>
+    
   )
 }
 
