@@ -1,6 +1,7 @@
 import React from "react";
 import Link from "gatsby-link";
 import styled from "styled-components";
+import MenuToggle from "./MenuToggle";
 
 const Outer = styled.div`
   display: flex;
@@ -50,18 +51,22 @@ const Name = P.extend`
   }
 `;
 
-const Header = () => (
+const Header = ({ responsive, toggleExpanded }) => (
   <Outer>
     <Inner>
       <Wrapper>
         <Name to="/">Samuel Machat</Name>
       </Wrapper>
 
-      <Wrapper>
-        <P to="/projects">Projects</P>
-        <P to="/about">About</P>
-        <P to="/contact">Contact</P>
-      </Wrapper>
+      {responsive ? (
+        <MenuToggle toggleExpanded={toggleExpanded} />
+      ) : (
+        <Wrapper>
+          <P to="/projects">Projects</P>
+          <P to="/about">About</P>
+          <P to="/contact">Contact</P>
+        </Wrapper>
+      )}
     </Inner>
   </Outer>
 );

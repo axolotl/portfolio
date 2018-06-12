@@ -6,10 +6,12 @@ import Outer from "./wrappers/Outer";
 import Inner from "./wrappers/Inner";
 import ResponsiveInner from "./wrappers/ResponsiveInner";
 import ContentWrapper from "./wrappers/ContentWrapper";
+import ResponsiveWrapper from "./wrappers/ResponsiveWrapper";
 
 // import components
 import Sidebar from "./Sidebar";
 import MenuToggle from "./MenuToggle";
+import Header from "./Header";
 
 class Responsive extends Component {
   state = {
@@ -29,29 +31,16 @@ class Responsive extends Component {
     const { expanded } = this.state;
 
     return (
-      <Outer>
-        {/* full screen */}
-        <MediaQuery key={"min"} minWidth={500}>
-          <Inner>
-            <Sidebar data={this.props.data} />
-
-            <ContentWrapper>{this.props.children()}</ContentWrapper>
-          </Inner>
-        </MediaQuery>
-
-        {/* for mobile */}
-        <MediaQuery key={"max"} maxWidth={500}>
-          <ResponsiveInner>
-            <MenuToggle toggleExpanded={toggleExpanded} />
-
+      <div>
+        <Header responsive toggleExpanded={toggleExpanded} />
+          <ResponsiveWrapper>
             {expanded ? (
-              <Sidebar data={this.props.data} />
+              <Sidebar responsive data={this.props.data} />
             ) : (
               <ContentWrapper>{this.props.children()}</ContentWrapper>
             )}
-          </ResponsiveInner>
-        </MediaQuery>
-      </Outer>
+          </ResponsiveWrapper>
+      </div>
     );
   }
 }

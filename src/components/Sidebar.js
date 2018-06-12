@@ -31,7 +31,7 @@ const StyledLink = styled(Link)`
   }
 `;
 
-const Sidebar = ({ data }) => {
+const Sidebar = ({ data, responsive }) => {
   const { edges } = data.allProjectsJson;
   const projects = edges.filter(edge => edge.node.type === "project");
   const exercises = edges.filter(edge => edge.node.type === "exercise");
@@ -66,6 +66,24 @@ const Sidebar = ({ data }) => {
           </ListItem>
         ))}
       </List>
+
+      {responsive && (
+        <List>
+          About
+          <ListItem key={"about"}>
+            <StyledLink to="/about">Who am I?</StyledLink>
+          </ListItem>
+        </List>
+      )}
+
+      {responsive && (
+        <List>
+          Contact
+          <ListItem key={"contact"}>
+            <StyledLink to="/contact">Contact me</StyledLink>
+          </ListItem>
+        </List>
+      )}
     </SidebarWrapper>
   );
 };

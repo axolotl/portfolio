@@ -2,6 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import Helmet from "react-helmet";
 import { injectGlobal } from "styled-components";
+import MediaQuery from "react-responsive";
 
 // import wrappers
 import Outer from "../components/wrappers/Outer";
@@ -10,6 +11,7 @@ import ContentWrapper from "../components/wrappers/ContentWrapper";
 
 // import components
 import Header from "../components/Header";
+import Sidebar from "../components/Sidebar";
 import Responsive from "../components/Responsive";
 import Image from "../components/Image";
 
@@ -43,26 +45,44 @@ const App = ({ children, location, data }) => (
       ]}
     />
 
-    {location.pathname.match(/^\/projects/) != null ? (
-      <div>
-        <Header />
-        <Responsive data={data} location={location}>
-          {children}
-        </Responsive>
-      </div>
-    ) : (
+    {/*
+    okay how to chart this problem
+    I need two pieces of information: screen resolution and whether page is at projects
+    wait ... 
+    for desktop resolution i need to know if i'm on the projects page
+
+    for the mobile I don't: all of that information will be contained in the dropdown
+
+    so ask screen resolution
+      if desktop -> proceed with current flow
+      if if mobile - > use new flow
+    */}
+
+    {/* full screen */}
+    <MediaQuery key={"min"} minWidth={500}>
       <div>
         <Header />
         <Outer>
           <Inner>
             <ContentWrapper>
-              <Image data={data} />
+              {location.pathname.match(/^\/projects/) != null ? (
+                <Sidebar data={data} />
+              ) : (
+                <Image data={data} />
+              )}
               {children()}
             </ContentWrapper>
           </Inner>
         </Outer>
       </div>
-    )}
+    </MediaQuery>
+
+    {/* for mobile */}
+    <MediaQuery key={"max"} maxWidth={500}>
+      <Responsive data={data}>
+        {children}
+      </Responsive>
+    </MediaQuery>
   </div>
 );
 

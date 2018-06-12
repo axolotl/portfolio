@@ -2,14 +2,19 @@ import React from "react";
 import styled from "styled-components";
 
 const Container = styled.div`
-  height: 4em;
-  width: 4em;
+  display: flex;
+  flex-direction: row-reverse;
+`;
+
+const Box = styled.div`
+  margin-top: 0.25em;
+  margin-right: 0.5em;
+  height: 3em;
+  width: 3em;
 `;
 
 const Button = styled.div`
-  margin: 20px;
   position: relative;
-  padding-left: 1.25em;
 
   :before {
     content: "";
@@ -24,8 +29,10 @@ const Button = styled.div`
 `;
 
 const MenuToggle = ({ toggleExpanded }) => (
-  <Container onClick={toggleExpanded}>
-    <Button />
+  <Container>
+    <Box onClick={toggleExpanded}>
+      <Button />
+    </Box>
   </Container>
 );
 
