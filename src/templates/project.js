@@ -4,6 +4,7 @@ import Text from "../components/styles/Text";
 
 const Container = styled.div`
   padding: 0;
+  width: 550px;
 `;
 
 const Title = styled.h3`

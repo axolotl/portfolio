@@ -6,7 +6,7 @@ import Text from "../components/styles/Text";
 const Projects = () => (
   <Content>
     <Title>Projects?</Title>
-    <Text>I did some projects. They are listed here.</Text>
+    <Text>I did some projects. They are listed here.I did some projects. They are listed here.I did some projects. They are listed here.I did some projects. They are listed here.I did some projects. They are listed here.I did some projects. They are listed here.I did some projects. They are listed here.I did some projects. They are listed here.I did some projects. They are listed here.</Text>
   </Content>
 );
 
