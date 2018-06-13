@@ -5,8 +5,8 @@ import Text from "../components/styles/Text";
 
 const About = () => (
   <Content>
-    <Title>Who am I?</Title>
-    <Text>I am a person.</Text>
+    <Title>About Me</Title>
+    <Text>In addition to being a self-taught web developer … blah blah blah</Text>
   </Content>
 );
 

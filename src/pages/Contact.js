@@ -5,8 +5,11 @@ import Text from "../components/styles/Text";
 
 const Contact = () => (
   <Content>
-    <Title>How to Contact Me</Title>
-    <Text>email, facebook, github, etc</Text>
+    <Title>Contact Me</Title>
+    <Text>Email</Text>
+    <Text>Facebook</Text>
+    <Text>Github</Text>
+    <Text>LinkedIn</Text>
   </Content>
 );
 

@@ -5,9 +5,6 @@
   "host_link": "https://axolotl-mastermind.herokuapp.com/",
   "github_link": "https://github.com/axolotl/mastermind-app",
   "content": [
-    "Fullstack web app for the code-breaking game Mastermind.",
-    "Postgres + Express + Sequelize + React + Redux. Hosted on Heroku.",
-    "This app is my most ambitious project to date, and my only fullstack one.",
-    "Styling is applied almost entirely inline via functional components."
+    "This app is a full stack build for the code-breaking game Mastermind. It is so far my most complex project in terms of interactivity and number of components. The gameplay is built with a drag and drop input field. State for the entire application is managed by Redux. Styles are applied inline via self-contained presentational components. An Express server running Sequelize and Postgres stores user scores to create a high scores tab."
   ]
 }

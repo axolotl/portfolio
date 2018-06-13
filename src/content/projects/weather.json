@@ -1,7 +1,7 @@
 {
   "title": "A simple weather app",
   "link_name": "Weather App",
-  "type": "exercise",
+  "type": "project",
   "host_link": "https://first-react-project-axolotl.firebaseapp.com/",
   "github_link": "https://github.com/axolotl/first-react-project",
   "content": [

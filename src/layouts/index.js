@@ -45,19 +45,6 @@ const App = ({ children, location, data }) => (
       ]}
     />
 
-    {/*
-    okay how to chart this problem
-    I need two pieces of information: screen resolution and whether page is at projects
-    wait ... 
-    for desktop resolution i need to know if i'm on the projects page
-
-    for the mobile I don't: all of that information will be contained in the dropdown
-
-    so ask screen resolution
-      if desktop -> proceed with current flow
-      if if mobile - > use new flow
-    */}
-
     {/* full screen */}
     <MediaQuery key={"min"} minWidth={500}>
       <div>
@@ -79,7 +66,7 @@ const App = ({ children, location, data }) => (
 
     {/* for mobile */}
     <MediaQuery key={"max"} maxWidth={500}>
-      <Responsive data={data}>
+      <Responsive data={data} location={location}>
         {children}
       </Responsive>
     </MediaQuery>

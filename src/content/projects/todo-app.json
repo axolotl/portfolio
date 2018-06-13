@@ -5,7 +5,6 @@
   "host_link": "https://axolotl.github.io/todo-app/",
   "github_link": "https://github.com/axolotl/todo-app",
   "content": [
-    "A recent exercise. State is managed by Redux and Redux Form.",
-    "blah"
+    "As the name suggests. State is managed by Redux and Redux Form."
   ]
 }

@@ -5,6 +5,7 @@
   "host_link": "https://auth-demo.herokuapp.com/",
   "github_link": "https://github.com/axolotl/auth-demo",
   "content": [
-    "A blah blah blah"
+    "A recent project, I decided to challenge myself to build a more complex back end. For my first full stack project, Mastermind, I built a simple RESTful api with database access and input. This time I added an authentication layer using Passport. Users of the app can create accounts, log in, log out, and save messages to their account. All database interfacing is handled by Sequelize and Postgres.",
+    "The front end is built with create-react-app and Bootstrap."
   ]
 }

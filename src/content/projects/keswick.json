@@ -1,13 +1,12 @@
 {
-  "title": "The Story of Keswick (a book site)",
+  "title": "The Story of Keswick (a book blog)",
   "link_name": "Gatsby Blog",
   "type": "project",
   "host_link": "http://storyofkeswick.com/",
   "github_link": "https://github.com/axolotl/keswick-book-site",
   "content": [
-    "A book site/blog built with Gatsby.",
-    "I rebuild this site from archives from Wayback Machine (the owner let their hosting subscription expire).",
-    "Original site was built with Drupal, so everything needed to be refactored for React.",
-    "Includes dynamically generated pages from markdown, pagination, and searchable categories."
+    "For this project I was tasked with rebuilding an old Drupal site. I did not have the original source code, so I had to reverse engineer everything using archives from Wayback Machine.",
+    "I rebuild the site using Gatsby. The first challenge was parsing all the old code, which was complicated by Drupal’s pattern of nesting dozens of divs and managing the CSS in long style sheets thousands of lines long. The second challenge was dynamically generating all two and half dozen posts from markdown, paginating them, and making them searchable by time period.",
+    "The original design was not mobile friendly."
   ]
 }

@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 const Content = styled.div`
-  widtH: 550px;
+  max-width: 550px;
   display: flex;
   flex-direction: column;
   line-height: 1.5;

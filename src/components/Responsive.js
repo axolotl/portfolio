@@ -4,7 +4,7 @@ import MediaQuery from "react-responsive";
 // import style components
 import Outer from "./wrappers/Outer";
 import Inner from "./wrappers/Inner";
-import ResponsiveInner from "./wrappers/ResponsiveInner";
+import ResponsiveContent from "./wrappers/ResponsiveContent";
 import ContentWrapper from "./wrappers/ContentWrapper";
 import ResponsiveWrapper from "./wrappers/ResponsiveWrapper";
 
@@ -12,6 +12,7 @@ import ResponsiveWrapper from "./wrappers/ResponsiveWrapper";
 import Sidebar from "./Sidebar";
 import MenuToggle from "./MenuToggle";
 import Header from "./Header";
+import Image from "../components/Image";
 
 class Responsive extends Component {
   state = {
@@ -29,17 +30,23 @@ class Responsive extends Component {
   render() {
     const { toggleExpanded } = this;
     const { expanded } = this.state;
+    const { data, location, children } = this.props;
 
     return (
       <div>
         <Header responsive toggleExpanded={toggleExpanded} />
-          <ResponsiveWrapper>
-            {expanded ? (
-              <Sidebar responsive data={this.props.data} />
-            ) : (
-              <ContentWrapper>{this.props.children()}</ContentWrapper>
-            )}
-          </ResponsiveWrapper>
+        <ResponsiveWrapper>
+          {expanded ? (
+            <Sidebar responsive data={data} />
+          ) : (
+            <ResponsiveContent>
+              {!location.pathname.match(/^\/projects/) && (
+                  <Image data={data} />
+                )}
+              {children()}
+            </ResponsiveContent>
+          )}
+        </ResponsiveWrapper>
       </div>
     );
   }
