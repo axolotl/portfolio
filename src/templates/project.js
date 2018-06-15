@@ -8,13 +8,31 @@ const Container = styled.div`
 `;
 
 const Title = styled.h3`
-  padding: 10px 0;
+  padding: 5px 0;
   margin: 5px 0;
+  margin-bottom: 10px;
   font-family: "Open Sans", sans-serif;
 `;
 
 const Links = styled.p`
   margin: 5px 0;
+  height: 30px;
+`;
+
+const A = styled.a`
+  margin-right: 10px;
+  margin-bottom: 10px;
+  font-family: "Open Sans", sans-serif;
+  text-decoration: none;
+  color: black;
+  padding: 5px;
+  border-radius: 2px;
+  border: 1px solid #ffd419;
+
+  :hover {
+    color: #ff4f0a;
+    border: 1px solid #ff4f0a;
+  }
 `;
 
 export default ({ data, errors }) => {
@@ -24,11 +42,10 @@ export default ({ data, errors }) => {
     <Container>
       <Title>{title}</Title>
       <Links>
-        <span>
-          {host_link && <a href={host_link}>See it live</a>}
-          <span> </span>
-          {github_link && <a href={github_link}>See source</a>}
-        </span>
+        <block>
+          {host_link && <A href={host_link}>See it live</A>}
+          {github_link && <A href={github_link}>See source</A>}
+        </block>
       </Links>
 
       {content.map((line, i) => <Text key={i}>{line}</Text>)}

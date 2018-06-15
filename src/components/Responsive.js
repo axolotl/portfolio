@@ -40,7 +40,7 @@ class Responsive extends Component {
             <Sidebar responsive data={data} />
           ) : (
             <ResponsiveContent>
-              {!location.pathname.match(/^\/projects/) && (
+              {!location.pathname.match(/projects|about|contact/) && (
                   <Image data={data} />
                 )}
               {children()}

@@ -18,12 +18,17 @@ import Image from "../components/Image";
 injectGlobal`
   body {
     margin: 0;
+    overflow-y: scroll;
   }
 
   p {
     font-family: 'Open Sans', sans-serif;
     margin: 0;
     padding: 0;
+  }
+
+  a { 
+    outline: 0;
   }
 `;
 
@@ -52,7 +57,7 @@ const App = ({ children, location, data }) => (
         <Outer>
           <Inner>
             <ContentWrapper>
-              {location.pathname.match(/^\/projects/) != null ? (
+              {location.pathname.match(/projects/) != null ? (
                 <Sidebar data={data} />
               ) : (
                 <Image data={data} />
