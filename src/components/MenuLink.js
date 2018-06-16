@@ -23,7 +23,7 @@ const GreyedOutLink = styled(Link)`
 `;
 
 const MenuLink =({ to, location, children }) => {
-  if (location != undefined && location.pathname === to) {
+  if (location != undefined && (location.pathname === to || location.pathname === `/portfolio${to}`)) {
     return <GreyedOutLink to={to}>{children}</GreyedOutLink>
   }
   else {
