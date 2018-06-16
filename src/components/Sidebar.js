@@ -21,21 +21,29 @@ const ListItem = styled.li`
   font-weight: normal;
 `;
 
-const Sidebar = ({ data, responsive, location }) => {
+// responsive and embedded are both props that will be passed down
+// if the user is on mobile. responsive handles the main menu at
+// the top of the screen and adds a few lines. embedded handles
+// the menu that is rendered inside the projects component
+// it removes the link to the projects component
+
+const Sidebar = ({ data, responsive, embedded, location }) => {
   const { edges } = data.allProjectsJson;
   const projects = edges.filter(edge => edge.node.type === "project");
   const exercises = edges.filter(edge => edge.node.type === "exercise");
 
   return (
     <SidebarWrapper>
-      <List>
-        Intro
-        <ListItem>
-          <MenuLink to="/projects" location={location}>
-            What and Why
-          </MenuLink>
-        </ListItem>
-      </List>
+      {!embedded && (
+        <List>
+          Intro
+          <ListItem>
+            <MenuLink to="/projects" location={location}>
+              What and Why
+            </MenuLink>
+          </ListItem>
+        </List>
+      )}
 
       <List>
         Projects
