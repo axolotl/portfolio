@@ -1,12 +1,12 @@
 {
-  "title": "Porfolio (this site)",
+  "title": "This Site (Portfolio)",
   "link_name": "This Site",
   "type": "project",
   "host_link": "",
   "github_link": "https://github.com/axolotl/portfolio",
   "content": [
     "I built this site using Gatsby. I did so for two reasons. First, to take advantage of Gatsby’s static page generation and the super quick responsiveness it affords. Second, to gain more experience with something beyond vanilla React.",
-    "Of note is that media content is handled by GraphQL, which I did not have much experience with. All images and content (stored as JSON files) are being accessed this way. Image processing is handled by gatsby-image, which manages the compression and blur effect upon load.",
+    "Of note is that media content is handled by GraphQL, which I did not have much experience with. Images and content (stored as JSON files) are being accessed this way. Image processing is handled by gatsby-image, which manages the compression and blur effect upon load.",
     "For this project I also spent more time on styling than I have on my other projects. While their purposes were more functional in nature, I wanted my portfolio to present well. In addition, the design is responsive and works equally well on mobile and desktop. If you can adjust the window size, do so and see for yourself."
   ]
 }

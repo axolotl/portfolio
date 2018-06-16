@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 const Text = styled.p`
-  margin-bottom: 10px;
+  margin-bottom: 20px;
   line-height: 1.5;
 `;
 

@@ -3,9 +3,11 @@
     "header": "Hello,",
     "content": [
       "My name is Samuel Machat.",
-      "This is my web development portfolio.",
-      "I am looking for a junior dev position where I can accelerate my learning while contributing to the production of real-world products.",
-      "View my profile on Github [link]. Contact me via [Facebook, email] for work references."
+      "I want to help build products that solve real world problems.",
+      "To that end, I taught myself how to build web apps with React. My work is showcased here <a href=\"google.com\">[link]</a>.",
+      "Every day I learn more. Every day my work improves. To see my progress, check out my Github profile [link]. With the structure and guidance of a team, I look forward to accelerating my growth.",
+      "I moved to San Francisco to pursue this goal. If you are in SF and looking for a junior developer, I hope you will choose me.",
+      "Contact me by [contact]."
     ]
   },
   "slides": {

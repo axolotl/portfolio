@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import Text from "../components/styles/Text";
+import BorderLink from "../components/styles/BorderLink";
 
 const Container = styled.div`
   padding: 0;
@@ -19,22 +20,6 @@ const Links = styled.p`
   height: 30px;
 `;
 
-const A = styled.a`
-  margin-right: 10px;
-  margin-bottom: 10px;
-  font-family: "Open Sans", sans-serif;
-  text-decoration: none;
-  color: black;
-  padding: 5px;
-  border-radius: 2px;
-  border: 1px solid #ffd419;
-
-  :hover {
-    color: #ff4f0a;
-    border: 1px solid #ff4f0a;
-  }
-`;
-
 export default ({ data, errors }) => {
   const { title, host_link, github_link, content } = data.projectsJson;
 
@@ -43,8 +28,8 @@ export default ({ data, errors }) => {
       <Title>{title}</Title>
       <Links>
         <block>
-          {host_link && <A href={host_link}>See it live</A>}
-          {github_link && <A href={github_link}>See source</A>}
+          {host_link && <BorderLink href={host_link}>See it live</BorderLink>}
+          {github_link && <BorderLink href={github_link}>See source</BorderLink>}
         </block>
       </Links>
 

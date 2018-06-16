@@ -58,7 +58,7 @@ const App = ({ children, location, data }) => (
           <Inner>
             <ContentWrapper>
               {location.pathname.match(/projects/) != null ? (
-                <Sidebar data={data} />
+                <Sidebar data={data} location={location}/>
               ) : (
                 <Image data={data} />
               )}

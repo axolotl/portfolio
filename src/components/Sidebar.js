@@ -2,8 +2,8 @@ import React from "react";
 import Link from "gatsby-link";
 import styled from "styled-components";
 
-// import style components
 import SidebarWrapper from "./wrappers/SidebarWrapper";
+import MenuLink from "./MenuLink";
 
 const List = styled.ul`
   margin: 5px 0;
@@ -21,17 +21,7 @@ const ListItem = styled.li`
   font-weight: normal;
 `;
 
-const StyledLink = styled(Link)`
-  font-family: "Open Sans", sans-serif;
-  text-decoration: none;
-  color: #393939;
-
-  :hover {
-    color: #ff4f0a;
-  }
-`;
-
-const Sidebar = ({ data, responsive }) => {
+const Sidebar = ({ data, responsive, location }) => {
   const { edges } = data.allProjectsJson;
   const projects = edges.filter(edge => edge.node.type === "project");
   const exercises = edges.filter(edge => edge.node.type === "exercise");
@@ -41,7 +31,9 @@ const Sidebar = ({ data, responsive }) => {
       <List>
         Intro
         <ListItem>
-          <StyledLink to="/projects">What and Why?</StyledLink>
+          <MenuLink to="/projects" location={location}>
+            What and Why
+          </MenuLink>
         </ListItem>
       </List>
 
@@ -49,9 +41,9 @@ const Sidebar = ({ data, responsive }) => {
         Projects
         {projects.map((project, i) => (
           <ListItem key={i}>
-            <StyledLink to={project.node.fields.slug}>
+            <MenuLink to={project.node.fields.slug} location={location}>
               {project.node.link_name}
-            </StyledLink>
+            </MenuLink>
           </ListItem>
         ))}
       </List>
@@ -60,9 +52,9 @@ const Sidebar = ({ data, responsive }) => {
         Exercises
         {exercises.map((exercise, i) => (
           <ListItem key={i}>
-            <StyledLink to={exercise.node.fields.slug}>
+            <MenuLink to={exercise.node.fields.slug} location={location}>
               {exercise.node.link_name}
-            </StyledLink>
+            </MenuLink>
           </ListItem>
         ))}
       </List>
@@ -71,7 +63,7 @@ const Sidebar = ({ data, responsive }) => {
         <List>
           About
           <ListItem key={"about"}>
-            <StyledLink to="/about">Who am I?</StyledLink>
+            <MenuLink to="/about">Who am I?</MenuLink>
           </ListItem>
         </List>
       )}
@@ -80,7 +72,7 @@ const Sidebar = ({ data, responsive }) => {
         <List>
           Contact
           <ListItem key={"contact"}>
-            <StyledLink to="/contact">Contact me</StyledLink>
+            <MenuLink to="/contact">Contact me</MenuLink>
           </ListItem>
         </List>
       )}
