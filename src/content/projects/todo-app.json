@@ -2,6 +2,7 @@
   "title": "To-Do App",
   "link_name": "To-Do App",
   "type": "exercise",
+  "image": "todo-app",
   "host_link": "https://axolotl.github.io/todo-app/",
   "github_link": "https://github.com/axolotl/todo-app",
   "content": [

@@ -2,6 +2,7 @@
   "title": "This Site (Portfolio)",
   "link_name": "This Site",
   "type": "project",
+  "image": "none",
   "host_link": "",
   "github_link": "https://github.com/axolotl/portfolio",
   "content": [

@@ -16,7 +16,7 @@ const About = () => (
     </Text>
     <Text>
       In my spare time I enjoy yoga, weightlifting, and reading. Recent favorite
-      book include <cite>Midnight’s Children</cite> by Salman Rushdie and{" "}
+      books include <cite>Midnight’s Children</cite> by Salman Rushdie and{" "}
       <cite>The Three-Body Problem</cite> by Cixin Liu. During the time that I
       worked as a barista, I enjoyed competing in latte art competitions.{" "}
     </Text>

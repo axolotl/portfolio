@@ -2,6 +2,7 @@
   "title": "Tic-Tac-Toe",
   "link_name": "Tic-Tac-Toe",
   "type": "exercise",
+  "image": "tic-tac-toe",
   "host_link": "https://axolotl.github.io/tic-tac-toe/",
   "github_link": "https://github.com/axolotl/tic-tac-toe",
   "content": [

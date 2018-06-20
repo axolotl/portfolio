@@ -2,6 +2,7 @@
   "title": "Mastermind (the classic code-breaking game)",
   "link_name": "Mastermind",
   "type": "project",
+  "image": "mastermind",
   "host_link": "https://axolotl-mastermind.herokuapp.com/",
   "github_link": "https://github.com/axolotl/mastermind-app",
   "content": [

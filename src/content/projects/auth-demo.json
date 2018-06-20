@@ -2,6 +2,7 @@
   "title": "Authentication App",
   "link_name": "Authentication App",
   "type": "project",
+  "image": "auth-demo",
   "host_link": "https://auth-demo.herokuapp.com/",
   "github_link": "https://github.com/axolotl/auth-demo",
   "content": [

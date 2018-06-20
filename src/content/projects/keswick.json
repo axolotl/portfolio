@@ -2,11 +2,11 @@
   "title": "Gatsby Blog (The Story of Keswick)",
   "link_name": "Gatsby Blog",
   "type": "project",
+  "image": "keswick",
   "host_link": "http://storyofkeswick.com/",
   "github_link": "https://github.com/axolotl/keswick-book-site",
   "content": [
     "For this project I was tasked with rebuilding an old Drupal site. I did not have the original source code, so I had to reverse engineer everything using archives from Wayback Machine.",
-    "I rebuild the site using Gatsby. The first challenge was parsing all the old code, which was complicated by Drupal’s pattern of nesting dozens of divs and managing the CSS in long style sheets thousands of lines long. The second challenge was dynamically generating all two and half dozen posts from markdown, paginating them, and making them searchable by time period.",
-    "The original design was not mobile friendly."
+    "I rebuild the site using Gatsby. The first challenge was parsing all the old code, which was complicated by Drupal’s pattern of nesting dozens of divs and managing the CSS in long style sheets thousands of lines long. The second challenge was dynamically generating all two and half dozen posts from markdown, paginating them, and making them searchable by time period."
   ]
 }

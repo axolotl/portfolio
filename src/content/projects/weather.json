@@ -2,6 +2,7 @@
   "title": "Weather App",
   "link_name": "Weather App",
   "type": "project",
+  "image": "weather",
   "host_link": "https://first-react-project-axolotl.firebaseapp.com/",
   "github_link": "https://github.com/axolotl/first-react-project",
   "content": [
