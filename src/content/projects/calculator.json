@@ -1,0 +1,11 @@
+{
+  "title": "Calculator",
+  "link_name": "Calculator",
+  "type": "exercise",
+  "image": "calculator",
+  "host_link": "https://axolotl.github.io/calculator/",
+  "github_link": "https://github.com/axolotl/calculator",
+  "content": [
+    "A basic calculator app. Available operations are addition, subtraction, multiplication, division, and modulo. App will warn the user if they try to use multiple leading zeros or add back-to-back decimal points. Other errors will be caught when the user attempts to resolve a nonsense expression."
+  ]
+}
