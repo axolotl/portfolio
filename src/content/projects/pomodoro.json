@@ -1,0 +1,11 @@
+{
+  "title": "Pomodoro Clock",
+  "link_name": "Pomodoro Clock",
+  "type": "exercise",
+  "image": "pomodoro",
+  "host_link": "https://axolotl.github.io/pomodoro/",
+  "github_link": "https://github.com/axolotl/pomodoro",
+  "content": [
+    "User can select work and break modes, and adjust the time for each. Countdown can be paused, restarted, and reset."
+  ]
+}

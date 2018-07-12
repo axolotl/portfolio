@@ -8,30 +8,25 @@ const Index = () => (
   <Content>
     <Title>Hello,</Title>
     <Text>My name is Samuel Machat.</Text>
-    <Text>I want to help build products that solve real world problems.</Text>
+    <Text>I’m passionate about leveraging technology to solve hard problems.</Text>
     <Text>
       To that end, I taught myself how to build web apps with React. My work is
       showcased <InternalLink to="/projects">here</InternalLink>.
     </Text>
     <Text>
-      Every day I learn more. Every day my work improves. To see my progress,
-      check out my{" "}
+      I am constantly learning, constantly improving. To see my progress, check out my{" "}
       <ExternalLink href="https://github.com/axolotl">
         Github profile
-      </ExternalLink>. With the structure and guidance of a team, I look forward
-      to accelerating my growth.
+      </ExternalLink>. I look forward to bringing this drive and curiosity to my next position.
     </Text>
     <Text>
-      I moved to San Francisco to pursue this goal. If you are in SF and looking
-      for a junior developer, I hope you will choose me.
-    </Text>
-    <Text>
-      Click <InternalLink to="/contact">here</InternalLink> to contact me.
+      If you think I might fit what you’re looking for, click <InternalLink to="/contact">here</InternalLink> to contact me.
     </Text>
   </Content>
 );
 
 export default Index;
+
 
 // const Index = ({ data }) => {
 //   const { header, content } = data.content.childContentJson.about;

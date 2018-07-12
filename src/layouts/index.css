@@ -14,7 +14,6 @@ h1 {
   margin: 18px 0 12px 0;
 }
 
-
 p {
   margin: 15px 0 15px 0;
   font-size: 1em;
@@ -181,6 +180,7 @@ a {
     overflow: visible;
     padding: 0px;
   }
+
   #right-side {
     /*force div to contain itself*/
     width: auto;
